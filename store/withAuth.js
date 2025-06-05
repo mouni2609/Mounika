@@ -1,18 +1,18 @@
 'use client';
 import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
-import useUserStore from '../useUserStore';
+import useUserStore from './useUserStore';
 
 const withAuth = (Component) => {
   return function ProtectedComponent(props) {
-    const user = useUserStore((state) => state.user);
     const router = useRouter();
+    const user = useUserStore((state) => state.user);
 
     useEffect(() => {
       if (!user) {
         router.push('/');
       }
-    }, [user]);
+    }, [user, router]);
 
     if (!user) return null;
 
@@ -21,3 +21,4 @@ const withAuth = (Component) => {
 };
 
 export default withAuth;
+

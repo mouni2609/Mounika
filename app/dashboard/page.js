@@ -1,6 +1,6 @@
 'use client';
-import withAuth from '../../store/hoc/withAuth';
-import useUserStore from '../../store/useUserStore';
+import withAuth from '../../store/withAuth';
+import useUserStore from '../../store/useUserStore'; // ✅ This is correct IF the above is your structure
 import { auth } from '../../lib/firebase';
 
 function DashboardPage() {

@@ -1,15 +1,20 @@
-import { create } from 'zustand';
-import { onAuthStateChanged } from 'firebase/auth';
-import { auth } from '../lib/firebase';
+import { create } from "zustand";
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from "../lib/firebase";  
 
-const useUserStore = create((set) => ({
-  user: null,
-  setUser: (user) => set({ user }),
-}));
+const useUserStore = create((set) => {
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      set({ user });
+    } else {
+      set({ user: null });
+    }
+  });
 
-// Listen to Firebase auth state changes
-onAuthStateChanged(auth, (user) => {
-  useUserStore.getState().setUser(user);
+  return {
+    user: null,
+    setUser: (user) => set({ user }),
+  };
 });
 
 export default useUserStore;
