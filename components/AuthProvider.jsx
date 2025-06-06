@@ -1,4 +1,3 @@
-// components/AuthProvider.jsx
 'use client';
 import { useEffect } from 'react';
 import { onAuthStateChanged } from 'firebase/auth';

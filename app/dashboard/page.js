@@ -1,6 +1,6 @@
 'use client';
 import withAuth from '../../store/withAuth';
-import useUserStore from '../../store/useUserStore'; // ✅ This is correct IF the above is your structure
+import useUserStore from '../../store/useUserStore'; 
 import { auth } from '../../lib/firebase';
 
 function DashboardPage() {
@@ -8,7 +8,7 @@ function DashboardPage() {
 
   const handleLogout = async () => {
     await auth.signOut();
-    location.reload(); // or use router.push('/')
+    location.reload(); 
   };
 
   return (
