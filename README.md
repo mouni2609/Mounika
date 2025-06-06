@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# * Login Page
 
-## Getting Started
+#### This is my login page authentication built using next.js,firebase,zustand.
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# * Project Setup Steps 
+## 1. Install Packages
+
+```
+npm install 
+```
+```
+npm install firebase
+```
+```
+npm install Zustand
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 2. start the Development Server
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 3. open http://localhost:3000/ in your browser to view the result.
+## Edit or udpate the app/page.js file, the changes will show automically
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+# * Project Features
+1. #### User login Page - Display the Login and SignInWithGoogle Button.
+2. #### Google Sign-In using Firebase - After Login firebase give the user details like name & email.
+3. #### Dashboard - Only authentication user can access it
+4. #### Zustand for User State - User login or logout, Zustand updates the user data automatically.
+5. #### Logout Functionality - Once click the logout button it's redirect to the login page.
+6. #### Notification - Login fails or network issue, error message will show an notification.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# * Deployment 
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Go to https://github.com/
+- Sign in with your GitHub account.
+- Import this repository.
+- It will detect it is a Next.js project and set everything up automatically.
